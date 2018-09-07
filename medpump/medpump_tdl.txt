@@ -1,0 +1,27 @@
+what's the goal?
+  make it pump an interval - done
+  track the remaining volume - done
+  stop when infusion is complete - done
+  check if there's a stop command
+  ask to resume or to exit to navigation
+
+tasks:
+
+--done--
+  pump -
+    print "drip"
+    time.sleep(60/drip_rate)
+  track volume -
+    volume remaining = total_volume
+    while total_volume > 0:
+      pump once
+      volume remaining = total_volume - (100/drip_set)
+    if volume remaining = 0:
+      print "Infusion complete!"
+--/done--
+
+  check if stop command -
+    resume-
+
+    exit to nav-
+      navigation()
